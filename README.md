@@ -10,35 +10,28 @@ This repository contains basic implementations of foundational machine learning 
 
 Gradient descent update rule:
 
-\[
-\theta := \theta - \alpha \cdot \frac{\partial J(\theta)}{\partial \theta}
-\]
+**LMS Update Rule**:  
+θ := θ - α · ∂J(θ)/∂θ
 
 ### 2. Normal Equation
 
-\[
-\theta = (X^T X)^{-1} X^T y
-\]
+θ = (XᵗX)⁻¹Xᵗy
 
 ### 3. Locally Weighted Linear Regression (LWLR)
 
 Weight for each training example:
 
-\[
-w^{(i)} = \exp\left( -\frac{(x^{(i)} - x_{query})^T(x^{(i)} - x_{query})}{2\tau^2} \right)
-\]
+**LWLR Weight**: 
+
+wᵢ = exp(-((xᵢ - x_query)ᵗ(xᵢ - x_query)) / (2τ²))
 
 Weighted normal equation:
 
-\[
-\theta = (X^T W X)^{-1} X^T W y
-\]
+θ = (XᵗWX)⁻¹XᵗWy
 
 Prediction:
 
-\[
-\hat{y} = x_{query}^T \theta
-\]
+ŷ = x_queryᵗθ
 
 *Not implemented yet:* Probabilistic Interpretation
 
